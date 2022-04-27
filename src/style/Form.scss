@@ -1,0 +1,167 @@
+.form {
+  position: relative;
+  max-width: 601px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 45px;
+
+  .form__icon-loupe {
+    position: absolute;
+    top: 11px;
+    right: 44px;
+    opacity: 60%;
+    cursor: text;
+
+    svg {
+      position: absolute;
+      width: 20px;
+      opacity: 40%;
+      transition: 0.7s;
+    }
+
+    .scale {
+      right: unset;
+      left: 5px;
+
+      svg {
+        opacity: 100%;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &::after {
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    content: "";
+    width: calc(100% - 4px);
+    height: 10px;
+    background-color: #ffffff;
+    border-right: 2px solid lightcyan;
+    border-left: 2px solid lightcyan;
+    z-index: 11;
+  }
+}
+
+.form--dropdown {
+  &::after {
+    display: block;
+  }
+}
+
+.form__input {
+  width: calc(100% - 31px);
+  height: 36px;
+  padding-left: 25px;
+  color: #333333;
+  border-radius: 20px;
+  background-color: #ffffff;
+  font-size: 20px;
+  border-color: transparent;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  border: 2px solid lightcyan;
+  font-family: "Roboto Condensed";
+
+  &::placeholder {
+    opacity: 80%;
+  }
+}
+
+.form__input--dropdown {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form__input--dropdown + .form::after {
+  display: block;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__input:focus + .form__icon-loupe {
+  right: unset;
+  left: 5px;
+}
+
+.show {
+  display: block;
+}
+
+.form__input:focus + .scale {
+  svg {
+    opacity: 100%;
+    transform: scale(1.1);
+  }
+}
+
+.form__logo {
+  position: absolute;
+  top: -131px;
+  right: 30px;
+  animation: rotateLogo 150s infinite;
+  z-index: -1;
+}
+
+@keyframes rotateLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scale {
+  left: -516px;
+
+  svg {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .form {
+    margin-bottom: 30px;
+  }
+
+  .form__logo {
+    right: 365px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .form {
+    width: 100%;
+    margin-bottom: 25px;
+
+    .form__icon-loupe {
+      display: none;
+    }
+  }
+
+  .form__logo {
+    top: -101px;
+    right: -5px;
+    animation: none;
+
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .form__input {
+    font-size: 16px;
+  }
+
+  .search__form-button {
+    right: 10px;
+  }
+}

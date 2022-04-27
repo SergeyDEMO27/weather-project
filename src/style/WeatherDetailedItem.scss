@@ -1,0 +1,229 @@
+.weather-detailed-item {
+  width: 11%;
+  text-align: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+  }
+}
+
+.weather-detailed-item__icon {
+  display: flex;
+  justify-content: center;
+  cursor: default;
+
+  &:hover .weather-detailed-item__title {
+    display: block;
+  }
+}
+
+.weather-detailed-item__temp {
+  width: 17px;
+  height: 25px;
+  margin-right: 4px;
+  background-image: url("/img/background/thermometer.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.weather-detailed-item__wind {
+  width: 22px;
+  height: 22px;
+  margin-right: 2px;
+  background-image: url("/img/background/wind3.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.weather-detailed-item__precip {
+  width: 20px;
+  height: 20px;
+  background-image: url("/img/background/precip1.svg");
+  background-repeat: no-repeat;
+}
+
+.weather-detailed-item__pressure {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  background-image: url("/img/background/pressure.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.weather-detailed-item__weather {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: salmon;
+  font-family: "Roboto Condensed";
+  text-decoration: underline;
+  text-decoration-color: darksalmon;
+}
+
+.weather-detailed-item__time {
+  position: relative;
+  width: 41px;
+  margin-top: 9px;
+  margin-right: auto;
+  margin-bottom: 7px;
+  margin-left: auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  font-family: "Bebas Neue";
+  letter-spacing: 0.05em;
+
+  &::after {
+    position: absolute;
+    top: -1px;
+    left: -18%;
+    content: "";
+    width: 120%;
+    height: 2px;
+    background-color: salmon;
+  }
+
+  &::before {
+    position: absolute;
+    right: -18%;
+    bottom: -1px;
+    content: "";
+    width: 120%;
+    height: 2px;
+    background-color: salmon;
+  }
+}
+
+.weather-detailed-item__icon {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-detailed-item__title {
+  display: none;
+  position: absolute;
+  top: -35px;
+  left: 0;
+  min-width: 100%;
+  min-height: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+  border-radius: 25px;
+  background-color: darksalmon;
+
+  &::after {
+    position: absolute;
+    left: calc(50% - 2px);
+    bottom: -4px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid darksalmon;
+  }
+}
+
+.weather-detailed-item__description {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  font-family: "Roboto Condensed";
+  text-decoration: underline;
+  text-decoration-color: darksalmon;
+  text-decoration-thickness: 2px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .weather-detailed-item {
+    width: 21%;
+    margin-bottom: 20px;
+
+    li {
+      .weather-detailed-item__therm {
+        top: -15px;
+        right: 44%;
+        transform: rotate(270deg);
+      }
+
+      .weather-detailed-item__wind {
+        top: -11px;
+        right: 44%;
+      }
+
+      .weather-detailed-item__precip {
+        top: -16px;
+        right: 44%;
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  .weather-detailed-item__title--themp {
+    &::after {
+      top: -7px;
+      right: 45%;
+      transform: rotate(270deg);
+    }
+  }
+
+  .weather-detailed-item__title--wind {
+    &::after {
+      top: -9px;
+      right: 44%;
+    }
+  }
+
+  .weather-detailed-item__title--precip {
+    &::after {
+      top: -11px;
+      right: 43%;
+      transform: rotate(270deg);
+    }
+  }
+
+  .weather-detailed-item__time {
+    margin-top: 20px;
+  }
+
+  .weather-detailed-item__description {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .weather-detailed-item {
+    width: 46%;
+    margin-bottom: 20px;
+
+    li {
+      .weather-detailed-item__icon {
+        display: none;
+      }
+    }
+  }
+
+  .weather-detailed-item__title {
+    &::after {
+      display: none;
+    }
+  }
+
+  .weather-detailed-item__time {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,25 @@
+.suggest {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: calc(100% - 4px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background-color: #ffffff;
+  opacity: 93%;
+  z-index: 10;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  border: 2px solid lightcyan;
+}
+
+.suggest__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}

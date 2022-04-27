@@ -1,0 +1,22 @@
+.suggestList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 50%;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.suggestList__item {
+  font-size: 24px;
+  font-weight: bold;
+  color: darkblue;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 60%;
+  }
+}

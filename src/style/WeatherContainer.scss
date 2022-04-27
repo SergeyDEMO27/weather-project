@@ -1,0 +1,19 @@
+.weather-container {
+  min-height: 576px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .weather-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .weather-container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

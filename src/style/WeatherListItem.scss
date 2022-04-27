@@ -1,0 +1,187 @@
+.weather-list-item {
+  position: relative;
+  width: 11%;
+  min-height: 217px;
+  padding-bottom: 10px;
+  color: #333333;
+  background-color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: transform 0.7s, background-color 0.7s;
+  border: 2px solid lightcyan;
+  box-shadow: 0px -1px 10px 2px rgba(34, 60, 80, 0.2);
+  font-family: "Bebas Neue";
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: transparent;
+    background-color: #fff8f8;
+    box-shadow: 0px -1px 10px 2px rgba(34, 60, 80, 0.2);
+    transform: scale(1.05);
+  }
+}
+
+.weather-list-item-active {
+  position: relative;
+  box-shadow: 0px 1px 10px 2px rgba(34, 60, 80, 0.2);
+  background-color: #fff8f8;
+  transform: scale(1);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: none;
+  background-color: #fff8f8;
+  z-index: 2;
+
+  &:hover,
+  &:focus {
+    cursor: auto;
+    box-shadow: 0px 1px 10px 2px rgba(34, 60, 80, 0.2);
+    background-color: #fff8f8;
+    transform: scale(1);
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -10px;
+    left: -2px;
+    content: "";
+    width: 100%;
+    height: 12px;
+    border-left: 2px solid lightcyan;
+    border-right: 2px solid lightcyan;
+    background-color: #fff8f8;
+    z-index: 10;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 7px;
+    background-color: #fff8f8;
+    z-index: 11;
+  }
+
+  .weather-list-item-description {
+    color: salmon;
+  }
+}
+
+.weather-list-item-today {
+  margin-top: 10px;
+  margin-bottom: 26px;
+  color: #003da6;
+  font-size: 22px;
+}
+
+.weather-list-item-day {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 22px;
+  text-transform: capitalize;
+  color: #003da6;
+}
+
+.weather-list-item-holiday {
+  color: #ff0000;
+}
+
+.weather-list-item-month {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.weather-list-item-description {
+  margin-top: 5px;
+  margin-bottom: 17px;
+  color: lightsalmon;
+  text-transform: lowercase;
+  font-size: 20px;
+  font-family: "Roboto Condensed";
+  text-decoration: underline;
+  text-decoration-color: darksalmon;
+}
+
+.weather-list-item-container {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  width: 80px;
+
+  div {
+    width: 38%;
+    height: 23px;
+    padding: 5px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Roboto Condensed";
+  }
+
+  div:first-of-type {
+    background-color: lightpink;
+    border: 2px solid lightblue;
+  }
+
+  div:last-of-type {
+    margin-top: 15px;
+    background-color: lightblue;
+    border: 2px solid lightpink;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .weather-list-item {
+    width: 20%;
+    margin-bottom: 25px;
+  }
+
+  .weather-list-item-active {
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    &:hover,
+    &:focus {
+      cursor: auto;
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      background-color: #fff8f8;
+    }
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .weather-list-item {
+    width: 42%;
+    margin-bottom: 25px;
+  }
+
+  .weather-list-item-active {
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    &:hover,
+    &:focus {
+      cursor: auto;
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      background-color: #fff8f8;
+    }
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.footer {
+  max-width: 1366px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-right: 10px;
+  font-family: "Bebas Neue";
+  letter-spacing: 0.05em;
+}
+
+.footer__title {
+  max-width: 165px;
+  margin-left: auto;
+  font-size: 12px;
+
+  span {
+    color: #ce0000;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    max-width: 810px;
+    padding-right: 20px;
+  }
+
+  .footer__title {
+    text-align: right;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    max-width: 480px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .footer__title {
+    text-align: right;
+  }
+}

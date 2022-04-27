@@ -1,0 +1,23 @@
+.weather-list {
+  display: flex;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .weather-list {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .weather-list {
+    flex-wrap: wrap;
+    max-width: 587px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

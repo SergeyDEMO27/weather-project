@@ -1,0 +1,38 @@
+.suggest-item {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 27px;
+  opacity: 85%;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 100%;
+    background-color: #fff8f8;
+  }
+}
+
+.suggest-item__title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  font-family: "Roboto Condensed";
+
+  &:focus {
+    opacity: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .suggest-item__title {
+    font-size: 16px;
+  }
+
+  .suggest-item {
+    &::after {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,240 @@
+.weatherNow {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  max-width: 300px;
+  width: 22%;
+  padding: 10px;
+  padding-right: 10px;
+  background-color: #fff8f8;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  border-radius: 25px;
+  text-align: left;
+  border: 2px solid lightcyan;
+}
+
+.weatherNow__wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.weatherNow__container {
+  display: flex;
+  width: 81px;
+
+  p {
+    max-width: 105px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: salmon;
+    font-family: "Roboto Condensed";
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+
+.weatherNow__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: salmon;
+  font-family: "Roboto Condensed";
+  text-transform: lowercase;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.weatherNow__icon {
+  position: absolute;
+  top: calc(50% + 15px);
+  left: calc(50% - 25px);
+  width: 58px;
+  height: 58px;
+}
+
+.weatherNow__description {
+  margin-top: 10px;
+}
+
+.weatherNow__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    text-align: center;
+  }
+
+  li:nth-of-type(2) {
+    width: 117px;
+  }
+}
+
+.weatherNow__list-title--therm {
+  &::after {
+    position: absolute;
+    top: 33px;
+    left: 8%;
+    content: "";
+    width: 17px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/img/background/thermometer.svg");
+  }
+}
+
+.weatherNow__list-title--wind {
+  &::after {
+    position: absolute;
+    left: 2px;
+    bottom: 4px;
+    content: "";
+    width: 21px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/img/background/wind3.svg");
+    transform: scaleX(-1);
+  }
+}
+
+.weatherNow__list-arrow {
+  position: absolute;
+  top: 38px;
+  right: 5px;
+}
+
+.weatherNow__list-title {
+  margin-top: 5px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  text-transform: lowercase;
+  font-family: "Roboto Condensed";
+  color: salmon;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.weatherNow__list-description {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+
+  span {
+    position: absolute;
+    top: 24px;
+    right: 5px;
+    font-size: 12px;
+    font-family: "Bebas Neue";
+    letter-spacing: 0.07em;
+    color: salmon;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .weatherNow {
+    position: static;
+    max-width: 195px;
+    min-width: unset;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
+  }
+
+  .weatherNow__wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  .weatherNow__icon {
+    position: static;
+    height: 45px;
+  }
+
+  .weatherNow__container {
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .weatherNow__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weatherNow__list-title,
+  .weatherNow__list-description {
+    font-size: 20px;
+  }
+
+  .weatherNow__title {
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .weatherNow {
+    position: static;
+    max-width: 195px;
+    min-width: 145px;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
+  }
+
+  .weatherNow__wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  .weatherNow__icon {
+    position: static;
+    height: 45px;
+  }
+
+  .weatherNow__container {
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .weatherNow__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weatherNow__list-title,
+  .weatherNow__list-description {
+    font-size: 20px;
+  }
+
+  .weatherNow__title {
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+}

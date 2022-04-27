@@ -1,0 +1,13 @@
+.FormContainer {
+  position: relative;
+  max-width: 570px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .FormContainer {
+    max-width: 550px;
+    width: unset;
+  }
+}

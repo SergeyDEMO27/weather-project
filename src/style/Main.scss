@@ -1,0 +1,58 @@
+.main {
+  width: 100%;
+  min-height: 740px;
+}
+
+.main__container {
+  position: relative;
+  max-width: 1366px;
+  min-height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main__error {
+  position: absolute;
+  top: 51px;
+  left: calc(50% - 165px);
+  width: 330px;
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+  text-transform: lowercase;
+}
+
+.main__title {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 75px;
+  font-size: 36px;
+  font-family: "Bebas Neue";
+  letter-spacing: 0.08em;
+  color: #333333;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .main__container {
+    max-width: 830px;
+  }
+
+  .main__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main__container {
+    max-width: 480px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main__title {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+}

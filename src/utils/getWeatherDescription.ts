@@ -1,0 +1,60 @@
+export const getWeatherDescription = (key: number): string => {
+  switch (key) {
+    case 1:
+      return "ясно";
+    case 2:
+      return "облачно";
+    case 3:
+      return "пасмурно";
+    case 45:
+      return "туман";
+    case 48:
+      return "изморозь";
+    case 51:
+      return "морось";
+    case 53:
+      return "морось";
+    case 55:
+      return "морось";
+    case 56:
+      return "изморозь";
+    case 57:
+      return "изморозь";
+    case 61:
+      return "дождь";
+    case 63:
+      return "дождь";
+    case 65:
+      return "дождь";
+    case 66:
+      return "дождь";
+    case 67:
+      return "дождь";
+    case 71:
+      return "снег";
+    case 73:
+      return "снег";
+    case 75:
+      return "снег";
+    case 77:
+      return "снег";
+    case 80:
+      return "ливень";
+    case 81:
+      return "ливень";
+    case 82:
+      return "ливень";
+    case 85:
+      return "снегопад";
+    case 86:
+      return "снегопад";
+    case 95:
+      return "гроза";
+    case 96:
+      return "гроза";
+    case 99:
+      return "гроза";
+    default:
+      return "ясно";
+  }
+};
