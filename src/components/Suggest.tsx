@@ -30,6 +30,8 @@ const Suggest: React.FC<ISuggestProps> = ({ getSelectedCity }) => {
       eventTarget.tagName === "LI"
     ) {
       const title = getCityTitle(eventTarget.textContent);
+      localStorage.setItem("selectedTitle", JSON.stringify(title));
+
       if (title) {
         dispatchStore(getWeatherAction(title));
         getSelectedCity(title);

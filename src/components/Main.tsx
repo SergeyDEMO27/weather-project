@@ -12,7 +12,9 @@ const Main: React.FC = () => {
   const { error: errorSuggest, isLoading: isLoadingSuggest } = useTypedSelector(
     (state) => state.suggestedCities
   );
-  const [selectedCityTitle, selectedCityTitleHandler] = useState("Москва");
+  const selectedTitle =
+    JSON.parse(localStorage.getItem("selectedTitle")!) || "Москва";
+  const [selectedCityTitle, selectedCityTitleHandler] = useState(selectedTitle);
 
   const getSelectedCity = (data: string) => {
     selectedCityTitleHandler(data);
@@ -29,7 +31,9 @@ const Main: React.FC = () => {
         {selectedCityTitle && (
           <h2 className="main__title">{selectedCityTitle}</h2>
         )}
-        {!errorWeather && <WeatherContainer />}
+        {!errorWeather && (
+          <WeatherContainer selectedCityTitle={selectedCityTitle} />
+        )}
       </div>
     </div>
   );

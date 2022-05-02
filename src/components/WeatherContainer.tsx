@@ -7,14 +7,20 @@ import WeatherList from "./WeatherList";
 import WeatherDetailed from "./WeatherDetailed";
 import "../style/WeatherContainer.scss";
 
-const WeatherContainer: React.FC = () => {
+interface IWeatherContainerProps {
+  selectedCityTitle: string;
+}
+
+const WeatherContainer: React.FC<IWeatherContainerProps> = ({
+  selectedCityTitle,
+}) => {
   const { weather } = useTypedSelector((state) => state.weather);
   const { currentWeather, eightDaysWeather, detailedDayWeather } = weather;
   const { temperature, windspeed, winddirection, weathercode } = currentWeather;
   const [activeId, activeIdHandler] = useState("1");
 
   useEffect(() => {
-    dispatchStore(getWeatherAction("Москва"));
+    dispatchStore(getWeatherAction(selectedCityTitle));
   }, []);
 
   if (weathercode === 0) {
