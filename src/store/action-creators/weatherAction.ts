@@ -1,9 +1,9 @@
-import { Dispatch } from "react";
-import { AnyAction } from "redux";
-import axios from "axios";
-import { GetWeatherActionTypes } from "../../types/weather";
-import citiesParser from "../../parsers/citiesParser";
-import weatherParser from "../../parsers/weatherParser";
+import { Dispatch } from 'react';
+import { AnyAction } from 'redux';
+import axios from 'axios';
+import { GetWeatherActionTypes } from '../../types/weather';
+import citiesParser from '../../parsers/citiesParser';
+import weatherParser from '../../parsers/weatherParser';
 
 export const getWeatherAction = (value: string) => {
   return async (dispatch: Dispatch<AnyAction>) => {
@@ -30,7 +30,7 @@ export const getWeatherAction = (value: string) => {
     } catch (e) {
       dispatch({
         type: GetWeatherActionTypes.GET_WEATHER_ERROR,
-        payload: "Произошла ошибка при загрузке погоды",
+        payload: 'Произошла ошибка при загрузке погоды',
       });
     }
   };
